@@ -1,0 +1,1 @@
+{"version":3,"file":"ClickActionHandler.d.ts","sourceRoot":"","sources":["../../src/ActionHandlers/ClickActionHandler.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,gBAAgB,CAAA;AACjD,OAAO,KAAK,EAAE,cAAc,EAAE,MAAM,iBAAiB,CAAC;AAEtD,qBAAa,kBAAmB,YAAW,cAAc,CAAC,WAAW,CAAC;IACtD,OAAO,CAAC,OAAO;gBAAP,OAAO,EAAE,WAAW;IAExC,MAAM,CAAC,OAAO,EAAE,WAAW;CAG9B"}

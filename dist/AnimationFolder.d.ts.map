@@ -1,0 +1,1 @@
+{"version":3,"file":"AnimationFolder.d.ts","sourceRoot":"","sources":["../src/AnimationFolder.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,SAAS,EAAE,MAAM,aAAa,CAAC;AAExC,qBAAa,eAAe;IACxB,OAAO,CAAC,WAAW,CAAgC;gBACvC,UAAU,EAAE,MAAM,CAAC,MAAM,EAAE,SAAS,CAAC;IAI3C,GAAG,CAAC,GAAG,EAAE,MAAM;IAUrB,aAAa,CAAC,GAAG,EAAE,MAAM,EAAE,SAAS,EAAE,SAAS;CAGlD"}

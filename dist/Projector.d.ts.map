@@ -1,0 +1,1 @@
+{"version":3,"file":"Projector.d.ts","sourceRoot":"","sources":["../src/Projector.ts"],"names":[],"mappings":"AAAA,qBAAa,SAAS;IAClB,OAAO,CAAC,YAAY,CAAC;IACrB,OAAO,CAAC,OAAO,CAAC;gBAEJ,WAAW,EAAE,OAAO;IAMhC,IAAI,CAAC,UAAU,EAAE,OAAO,CAAC,mBAAmB,CAAC;CAoBhD"}

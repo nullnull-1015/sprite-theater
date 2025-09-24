@@ -1,0 +1,1 @@
+{"version":3,"file":"ActionHandler.d.ts","sourceRoot":"","sources":["../../src/ActionHandlers/ActionHandler.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,MAAM,EAAE,MAAM,gBAAgB,CAAC;AAE7C,MAAM,WAAW,cAAc,CAAC,CAAC,SAAS,MAAM;IAC5C,MAAM,CAAC,MAAM,EAAE,CAAC,GAAG,IAAI,CAAC;CAC3B"}
