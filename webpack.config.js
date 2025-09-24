@@ -6,7 +6,9 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: '[name].js'
+        filename: '[name].js',
+        library: 'SpriteTheater',
+        libraryTarget: 'umd'
     },
     resolve: {
         extensions: ['.ts', '.js']
