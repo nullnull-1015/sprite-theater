@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprite Theater Sample</title>
+    <script src="https://cdn.jsdelivr.net/gh/nullnull-1015/sprite-theater@0.1.1/dist/bundle.js"></script>
+    <link rel="stylesheet" href="./sample.css">
+</head>
+<body>
+    <div class="center">
+        <div class="fireworks-container"></div>
+        <button class="char-button">
+            Launch
+        </button>
+        <button class="char-button">
+            Launch
+        </button>
+    </div>
+    <script>
+        function positionScreen(button, screen) {
+            const rect = button.getBoundingClientRect();
+            screen.style.width = rect.width + 'px';
+            screen.style.height = rect.height + 'px';
+
+            screen.style.left = (window.scrollX + rect.right - rect.height) + 'px';
+            screen.style.top = (window.scrollY + rect.top - rect.height*0.73) + 'px';
+        }
+
+        function launchFireworks(element, color="red", particles = 20, minDistance = 50, maxDistance = 100) {
+            const rect = element.getBoundingClientRect();
+            const cx = window.scrollX + rect.left + rect.width / 2;
+            const cy = window.scrollY + rect.top + rect.height / 2;
+
+            for (let i = 0; i < particles; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'firework';
+                particle.style.backgroundColor = color
+                
+                const angle = Math.random() * 2 * Math.PI;
+                const distance = minDistance + Math.random() * (maxDistance - minDistance);
+                const x = Math.cos(angle) * distance + 'px';
+                const y = Math.sin(angle) * distance - 200 + 'px';
+                particle.style.setProperty('--x', x);
+                particle.style.setProperty('--y', y);
+
+                particle.style.left = cx + 'px';
+                particle.style.top = cy + 'px';
+                element.appendChild(particle);
+
+                particle.addEventListener('animationend', () => particle.remove());
+            }
+        }
+
+
+        (async () => {
+            const buttons = document.getElementsByClassName('char-button');
+            const theaters = []
+            for(const button of buttons) {
+                // スクリーンの配置
+                const screen = document.createElement('div');
+                screen.classList.add("screen");
+                button.after(screen);
+                positionScreen(button, screen);
+                window.addEventListener('resize', () => positionScreen(button, screen));
+
+                // 花火のセッティング
+                const container = document.querySelector('.fireworks-container');
+                const hue = Math.random() * 360; // 0-360度
+                const saturation = 80 + Math.random() * 20; // 80-100%
+                const lightness = 50 + Math.random() * 10; // 50-60%
+                const color = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+                button.addEventListener("click", () => {
+                    launchFireworks(container, color);
+
+                    // 押下アニメーション
+                    button.classList.add('js-active');
+                    setTimeout(() => button.classList.remove('js-active'), 550);
+                });
+
+                // スプライトアニメーション(スクリーンの指定)
+                const theater = new SpriteTheater.Theater(screen);
+
+                // set event listener
+                screen.addEventListener("click", async (e) => {
+                    e.stopPropagation();
+                    await theater.dispatcher.dispatch({"type": "jump", "value": {"animeUri": "sprite/click.json:click"}})
+                })
+
+                theater.dispatcher.register('click', new SpriteTheater.ClickActionHandler(button));
+                
+                // play animation
+                await theater.play("sprite/swing.json:swing")
+                theaters.push(theater);
+            }
+        })();
+    </script>
+</body>
+</html>

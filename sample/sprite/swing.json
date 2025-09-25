@@ -1,0 +1,72 @@
+{
+    "frames": {
+        "swing0": {
+            "frame": { "x": 0, "y": 0, "w": 640, "h": 640 },
+            "sourceSize": { "w":5760, "h":640 }
+        },
+        "swing1": {
+            "frame": { "x": 640, "y": 0, "w": 640, "h": 640 },
+            "sourceSize": { "w":5760, "h":640 }
+        },
+        "swing2": {
+            "frame": { "x": 1280, "y": 0, "w": 640, "h": 640 },
+            "sourceSize": { "w":5760, "h":640 }
+        },
+        "swing3": {
+            "frame": { "x": 1920, "y": 0, "w": 640, "h": 640 },
+            "sourceSize": { "w":5760, "h":640 }
+        },
+        "swing4": {
+            "frame": { "x": 2560, "y": 0, "w": 640, "h": 640 },
+            "sourceSize": { "w":5760, "h":640 }
+        },
+        "swing5": {
+            "frame": { "x": 3200, "y": 0, "w": 640, "h": 640 },
+            "sourceSize": { "w":5760, "h":640 }
+        },
+        "swing6": {
+            "frame": { "x": 3840, "y": 0, "w": 640, "h": 640 },
+            "sourceSize": { "w":5760, "h":640 }
+        },
+        "swing7": {
+            "frame": { "x": 4480, "y": 0, "w": 640, "h": 640 },
+            "sourceSize": { "w":5760, "h":640 }
+        },
+        "swing8": {
+            "frame": { "x": 5120, "y": 0, "w": 640, "h": 640 },
+            "sourceSize": { "w":5760, "h":640 }
+        }
+    },
+    "animations": {
+        "swing": {
+            "type": "time",
+            "frames": [
+                {"frameName": "swing1", "duration":83},
+                {"frameName": "swing3", "duration":83},
+                {"frameName": "swing2", "duration":83},
+                {"frameName": "swing4", "duration":83},
+                {"frameName": "swing5", "duration":83},
+                {"frameName": "swing6", "duration":83},
+                {"frameName": "swing7", "duration":83},
+                {"frameName": "swing8", "duration": 500},
+                {"frameName": "swing8", "duration": 500},
+                {"frameName": "swing8", "duration": 500},
+                {"frameName": "swing7", "duration": 83},
+                {"frameName": "swing6", "duration": 83},
+                {"frameName": "swing5", "duration": 83},
+                {"frameName": "swing4", "duration": 83},
+                {"frameName": "swing3", "duration": 83},
+                {"frameName": "swing2", "duration": 83},
+                {"frameName": "swing1", "duration": 83},
+                {"frameName": "swing0", "duration": 500},
+                {"frameName": "swing0", "duration": 500},
+                {"frameName": "swing0", "duration": 500},
+                {"frameName": "swing0", "duration": 1000, "actions": [{"type": "jump", "value": { "animeUri": "sprite/swing.json:swing", "frameIdx": 0 }}]}
+            ]
+        }
+    },
+    "meta": {
+        "image": "sprite/swing.png",
+        "size": { "w":5760, "h":640 }
+    }
+}

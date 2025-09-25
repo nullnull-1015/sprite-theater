@@ -1,0 +1,78 @@
+{
+    "frames": {
+        "click0": {
+            "frame": { "x": 0, "y": 0, "w": 640, "h": 640 },
+            "size": { "w":7680, "h":640 }
+        },
+        "click1": {
+            "frame": { "x": 640, "y": 0, "w": 640, "h": 640 },
+            "size": { "w":7680, "h":640 }
+        },
+        "click2": {
+            "frame": { "x": 1280, "y": 0, "w": 640, "h": 640 },
+            "size": { "w":7680, "h":640 }
+        },
+        "click3": {
+            "frame": { "x": 1920, "y": 0, "w": 640, "h": 640 },
+            "size": { "w":7680, "h":640 }
+        },
+        "click4": {
+            "frame": { "x": 2560, "y": 0, "w": 640, "h": 640 },
+            "size": { "w":7680, "h":640 }
+        },
+        "click5": {
+            "frame": { "x": 3200, "y": 0, "w": 640, "h": 640 },
+            "size": { "w":7680, "h":640 }
+        },
+        "click6": {
+            "frame": { "x": 3840, "y": 0, "w": 640, "h": 640 },
+            "size": { "w":7680, "h":640 }
+        },
+        "click7": {
+            "frame": { "x": 4480, "y": 0, "w": 640, "h": 640 },
+            "size": { "w":7680, "h":640 }
+        },
+        "click8": {
+            "frame": { "x": 5120, "y": 0, "w": 640, "h": 640 },
+            "size": { "w":7680, "h":640 }
+        },
+        "click9": {
+            "frame": { "x": 5760, "y": 0, "w": 640, "h": 640 },
+            "size": { "w":7680, "h":640 }
+        },
+        "click10": {
+            "frame": { "x": 6400, "y": 0, "w": 640, "h": 640 },
+            "size": { "w":7680, "h":640 }
+        },
+        "click11": {
+            "frame": { "x": 7040, "y": 0, "w": 640, "h": 640 },
+            "size": { "w":7680, "h":640 }
+        }
+    },
+    "animations": {
+        "click": {
+            "type": "time",
+            "frames": [
+                {"frameName": "click0", "duration": 50},
+                {"frameName": "click1", "duration": 50},
+                {"frameName": "click2", "duration": 1000},
+                {"frameName": "click3", "duration": 83},
+                {"frameName": "click4", "duration": 83},
+                {"frameName": "click5", "duration": 83},
+                {"frameName": "click6", "duration": 83},
+                {"frameName": "click7", "duration": 16},
+                {"frameName": "click7", "duration": 500, "actions": [{"type": "click", "value": {}}]},
+                {"frameName": "click8", "duration": 160},
+                {"frameName": "click9", "duration": 125},
+                {"frameName": "click10", "duration": 83},
+                {"frameName": "click11", "duration": 83},
+                {"frameName": "click11", "duration": 1500},
+                {"frameName": "click11", "duration": 83, "actions": [{"type": "jump", "value": { "animeUri": "sprite/swing.json:swing", "frameIdx": 5}}]}
+            ]
+        }
+    },
+    "meta": {
+        "image": "sprite/click.png",
+        "size": { "w":7680, "h":640 }
+    }
+}
