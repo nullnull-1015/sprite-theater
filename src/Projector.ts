@@ -17,7 +17,7 @@ export class Projector {
         const height = this._placeHolder.clientHeight - parseFloat(style.paddingTop)  - parseFloat(style.paddingBottom);
 
         // fit in screen
-        if (width > height) {
+        if (width >= height) {
             this._screen.style.height = "100%";
             this._screen.style.removeProperty("width");
         }
